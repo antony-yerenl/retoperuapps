@@ -25,17 +25,19 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `fecha_nacimiento` date NOT NULL,
   `edad` varchar(2) NOT NULL,
   `estado` varchar(1) DEFAULT '1',
+  `nombre_usuario` varchar(50) DEFAULT NULL,
+  `contrasena` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla peruapps.usuario: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla peruapps.usuario: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`id`, `nombre`, `correo`, `fecha_nacimiento`, `edad`, `estado`) VALUES
-	(1, 'Antony Yeren Lezama', 'antony.yerenl@gmail.com', '1995-02-24', '26', '0'),
-	(2, 'Jorge Luis M', 'jorge.lm@hotmail.com', '1990-02-24', '30', '1'),
-	(3, 'victor M', 'victorvelas.lst@gmail.com', '2021-11-03', '12', '1'),
-	(4, 'Frank', 'correos@prueba.com', '2021-11-03', '20', NULL),
-	(5, 'franklin', 'frank@pereda.com', '2021-01-31', '20', '1');
+INSERT INTO `usuario` (`id`, `nombre`, `correo`, `fecha_nacimiento`, `edad`, `estado`, `nombre_usuario`, `contrasena`) VALUES
+	(1, 'Antony Yeren Lezama', 'antony.yerenl@gmail.com', '1995-02-24', '26', '0', NULL, NULL),
+	(2, 'Jorge Luis M', 'jorge.lm@hotmail.com', '1990-02-24', '30', '1', 'admin', 'admin'),
+	(3, 'victor M', 'victorvelas.lst@gmail.com', '2021-11-03', '12', '1', NULL, NULL),
+	(4, 'Frank', 'correos@prueba.com', '2021-11-03', '20', NULL, NULL, NULL),
+	(5, 'franklin', 'frank@pereda.com', '2021-01-31', '20', '1', NULL, NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

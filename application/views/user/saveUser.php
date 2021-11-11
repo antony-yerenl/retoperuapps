@@ -29,6 +29,18 @@
                     <input type="number" name="edad" id="edad" class="form-control" value="<?= htmlentities($user['edad'] ?? ''); ?>" <?= $action == 'delete' ? 'readonly' : ''; ?>>
                 </td>
             </tr>
+            <tr>
+                <td>Nombre Usuario</td>
+                <td>
+                    <input type="text" name="nombre_usuario" id="nombre_usuario" class="form-control" value="<?= htmlentities($user['nombre_usuario'] ?? ''); ?>" <?= $action == 'delete' ? 'readonly' : ''; ?>>
+                </td>
+            </tr>
+            <tr>
+                <td>Contraseña</td>
+                <td>
+                    <input type="password" name="contrasena" id="contrasena" class="form-control" value="<?= htmlentities($user['contrasena'] ?? ''); ?>" <?= $action == 'delete' ? 'readonly' : ''; ?>>
+                </td>
+            </tr>
         </table>
     </form>
 

@@ -17,7 +17,7 @@
         }
 
         public function findUser($id) {
-            $this->db->select('id, nombre, correo, fecha_nacimiento, edad');
+            $this->db->select('id, nombre, correo, fecha_nacimiento, edad, nombre_usuario, contrasena');
             $this->db->from('usuario');
             $this->db->where('id', $id);
             
